@@ -9,12 +9,25 @@ app.use(express.json());
 app.get("/todo", (req, res) => {});
 
 app.post("/todo", (req, res) => {
-  const title = req.body.title;
-  const description = req.body.description;
+  const createPayload = req.body;
+  const parsedPayload = createTodo.safeParse(createPayload);
+  if (!parsedPayload) {
+    res.status(411).json({
+      message: "you sent the wrong inputs",
+    });
+    return;
+  }
 });
 
 app.put("/completed", (req, res) => {
-  const id = req.body.id;
+  const updatePayload = req.body;
+  const parsedPayload = updateTodo.safeParse(updatePayload);
+  if (!parsedPayload) {
+    res.status(411).json({
+      message: "you sent the wrong inputs",
+    });
+    return;
+  }
 });
 
 app.listen(port);

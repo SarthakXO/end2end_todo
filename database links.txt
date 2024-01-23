@@ -1,0 +1,8 @@
+POSTGRESS-> postgresql://culsarthak:DmMQ0GReiY4T@ep-yellow-hall-a59f5gsn.us-east-2.aws.neon.tech/cohortStudy?sslmode=require
+
+(neon tech)
+
+
+
+
+MONGODB-> mongodb+srv://culsarthak:modiji1234@cohortstudy.2dwg4mq.mongodb.net/
